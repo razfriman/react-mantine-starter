@@ -8,7 +8,7 @@ import {
   Paper,
   Transition,
 } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useToggle } from '@mantine/hooks';
 import { Link, useMatch } from 'react-router-dom';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
@@ -91,7 +91,7 @@ export const AppHeader = () => {
     { link: '/', label: 'Home' },
     { link: '/counter', label: 'Counter' },
   ];
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, toggle] = useToggle();
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
@@ -99,7 +99,7 @@ export const AppHeader = () => {
       key={link.label}
       to={link.link}
       className={cx(classes.link, { [classes.linkActive]: useMatch(link.link) })}
-      onClick={() => toggleOpened(false)}
+      onClick={() => toggle(false)}
     >
       {link.label}
     </Link>
@@ -117,7 +117,7 @@ export const AppHeader = () => {
           <ThemeSwitcher />
           <Burger
             opened={opened}
-            onClick={() => toggleOpened()}
+            onClick={() => toggle()}
             className={classes.burger}
             aria-label='links dropdown menu'
             size='sm'

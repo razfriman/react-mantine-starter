@@ -1,5 +1,5 @@
 import { Hero } from '@/ui/Hero';
-import { Container, List, ListItem, Stack } from '@mantine/core';
+import { Container, List, Stack } from '@mantine/core';
 
 export const Home = () => {
   return (
@@ -7,11 +7,11 @@ export const Home = () => {
       <Stack spacing={32}>
         <Hero title='React Mantine Starter' />
         <List>
-          <ListItem>Prettier code formatting</ListItem>
-          <ListItem>ESLint code linting</ListItem>
-          <ListItem>Mantine UI library</ListItem>
-          <ListItem>Light/Dark mode switcher</ListItem>
-          <ListItem>SVG icon component</ListItem>
+          <List.Item>Prettier code formatting</List.Item>
+          <List.Item>ESLint code linting</List.Item>
+          <List.Item>Mantine UI library</List.Item>
+          <List.Item>Light/Dark mode switcher</List.Item>
+          <List.Item>SVG icon component</List.Item>
         </List>
       </Stack>
     </Container>
