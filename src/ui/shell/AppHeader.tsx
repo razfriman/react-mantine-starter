@@ -10,7 +10,7 @@ import {
 } from '@mantine/core';
 import { useToggle } from '@mantine/hooks';
 import { Link, useMatch } from 'react-router-dom';
-import { ThemeSwitcher } from './ThemeSwitcher';
+import { ThemeSwitcher } from '../ThemeSwitcher';
 
 const HEADER_HEIGHT = 60;
 
@@ -108,7 +108,7 @@ export const AppHeader = () => {
   return (
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
-        <Avatar alt='Avatar' radius='xl' component={Link} to='/' />
+        <Avatar alt='Avatar' radius='xl' component={Link} to='/profile' />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

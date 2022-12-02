@@ -1,6 +1,6 @@
 import { ActionIcon, Footer, Group } from '@mantine/core';
-import { Icon } from './Icons/Icon';
-import { IconName } from './Icons/IconName';
+import { Icon } from '../Icons/Icon';
+import { IconName } from '../Icons/IconName';
 
 const links: { href: string; icon: IconName }[] = [
   {
